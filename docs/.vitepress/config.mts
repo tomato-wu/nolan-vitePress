@@ -10,7 +10,7 @@ export default defineConfig({
     siteTitle: 'Nolan 的技术博客',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'React', link: '/markdown-examples' },
+      { text: 'React', link: '/react-docs' },
       { text: 'Vue', link: '/markdown-examples' },
       { text: 'JS', link: '/markdown-examples' },
       { text: 'TS', link: '/markdown-examples' },
@@ -21,16 +21,16 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'React技术之旅',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '使用教程', link: '/react-docs' },
+          { text: 'zustand状态管理', link: '/ReactDocs/zustand-docs' }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/tomato-wu?tab=repositories' }
     ]
   }
 })
