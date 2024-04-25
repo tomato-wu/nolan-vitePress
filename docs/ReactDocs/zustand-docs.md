@@ -1,10 +1,9 @@
----
-theme: smartblue
-highlight: a11y-dark
----
 # 一、Zustand 状态库简介
 
+::: tip 简介：
 Zustand 是一个轻量级、简洁且强大的 React 状态管理库，旨在为您的 React 项目提供更简单、更灵活的状态管理方式。与其他流行的状态管理库（如 Redux、MobX 等）相比，Zustand 的 API 更加简洁明了，学习成本较低，且无需引入繁琐的中间件和配置。同时，Zustand 支持 TypeScript，让您的项目更具健壮性。
+:::
+
 
 Zustand 官方文档地址 ： https://docs.pmnd.rs/zustand/getting-started/introduction
 
@@ -36,18 +35,17 @@ Zustand 是 2021 年 Star 增长最快的 React 状态管理库，设计理念�
 
 可以看到 zustand 在近三年都是名列前茅的状态库
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f06774ffe7f542579c167f3d8b8ba43d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2152&h=912&s=147232&e=png&b=f0f0ee)
+![alt text](image-1.png)
 
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0b08f280e23d424cbd7476c754906d8d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1808&h=798&s=137004&e=png&b=f0f0ee)
+![alt text](image-2.png)
 
 
-![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2ddeab1c1e034e48aba4cb7449263766~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2032&h=744&s=148879&e=png&b=f0f0ee)
+![alt text](image-3.png)
 
-# 为什么会考虑 ZUstand 这个状态库
-
-> 在公司的项目中使用的是 dva.js 作为 状态管理，但是Dva.js在编写代码时过于臃肿，并且 Dva 不再维护，其在 ts 下的都没有任何提示的问题也逐步暴露。这使得我考虑有没有一种更加优雅的方式进行React状态的管理，并且能够完美兼容项目中已有的状态管理方法，作为一种补充手段为开发提效。
->
+::: tip 为什么会考虑 ZUstand 这个状态库
+在公司的项目中使用的是 dva.js 作为 状态管理，但是Dva.js在编写代码时过于臃肿，并且 Dva 不再维护，其在 ts 下的都没有任何提示的问题也逐步暴露。这使得我考虑有没有一种更加优雅的方式进行React状态的管理，并且能够完美兼容项目中已有的状态管理方法，作为一种补充手段为开发提效。
+:::
 
 ## 在实际使用中，dva.js 会有如下的缺点
 ### 学习成本：
@@ -61,19 +59,22 @@ dva.js 的更新速度相比其他框架来说较慢，不能及时跟上最新�
 
 ### 错误处理不够优雅：
 dva.js 在处理错误时，往往会导致整个应用崩溃，而不是只影响出错的部分。
+::: tip
 > 在 dva.js 中，如果一个 effect 中的异步操作出错了，那么这个错误会导致整个应用崩溃，而不仅仅是影响当前的异步操作。这是因为 dva.js 使用的 redux-saga 在处理异步操作时，如果发生错误，会直接抛出，而不是被捕获并处理。
 > 
 > 这样的错误处理方式，虽然可以让开发者立即发现问题，但是对于生产环境的应用来说，可能会导致整个应用的可用性下降。比如，一个用户在使用应用的过程中，如果触发了一个有错误的异步操作，那么整个应用就会崩溃，用户就无法继续使用，这显然是不可接受的。
 > 
 > 理想的错误处理方式应该是，当一个异步操作出错时，只影响这个操作，而不会影响到整个应用。并且，应该提供一种方式，让开发者可以自定义错误处理逻辑，比如显示一个错误提示，或者做一些错误恢复的操作。但是 dva.js 并没有提供这样的机制，这就是它在错误处理上的一个主要缺点。
-
+:::
 ### 代码冗余：
+::: tip
 dva.js 的代码冗余问题比较严重，特别是在处理异步操作时，需要写大量的 boilerplate code。需要在reducer, saga, action之间来回切换，跳来跳去
-
+:::
 
 ### 依赖过多：
-
+::: tip
 dva.js 依赖于多个库，如 React、Redux、Redux-Saga、React-Router 等。虽然这些库都是非常优秀的，但是这也意味着 dva.js 的项目会有更多的依赖，这可能会导致项目的维护和升级变得更加复杂。
+:::
 
 我认为 dva.js 更加适用于中小型的 React 项目，对于大型复杂的项目来说优点难受
 zustand 能完美满足我这一需求，它足够简单且能够和其他状态库共存。
@@ -894,7 +895,8 @@ export default useStore
 
 从页面视角更新过程：
 
-![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad3d7095ab5d4c33bd9af71dea0957e5~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=2178&h=1574&s=1172146&e=png&b=f9e9e2)
+![alt text](image-4.png)
+
 ## 积极拥抱 hooks
 
 1. 我认为zustand最大的优点就是它跟本质上就是带了发布订阅模式的hooks。redux你存储的数据一直会在内存里面，你切换了路由数据还是在，但是zustand会跟着页面卸载数据会卸载，这就使得你存数据就很自然。

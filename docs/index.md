@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: 快速上手
-      link: /get-started
+      link: /ReactDocs/react-docs
     - theme: alt
-      text: 环境变量 CheatSheet
-      link: '/get-started.html#_4-%E6%9C%AC%E5%9C%B0%E8%B0%83%E8%AF%95'
+      text: 我的掘金
+      link: 'https://juejin.cn/user/2841599197616894/posts'
 
 features:
   - title: 运行速度提升
