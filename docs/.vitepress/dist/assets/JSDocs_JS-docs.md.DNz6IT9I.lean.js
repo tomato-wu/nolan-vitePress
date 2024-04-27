@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.BXNdNthB.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"JSDocs/JS-docs.md","filePath":"JSDocs/JS-docs.md"}'),s={name:"JSDocs/JS-docs.md"};function c(a,r,n,d,p,_){return o(),t("div")}const f=e(s,[["render",c]]);export{m as __pageData,f as default};
