@@ -25,7 +25,8 @@ export default defineConfig({
         text: 'React技术之旅',
         items: [
           { text: '使用教程', link: '/ReactDocs/react-docs' },
-          { text: 'zustand状态管理', link: '/ReactDocs/zustand-docs' }
+          { text: 'Zustand 状态库：轻便、简洁、强大的 React 状态管理工具', link: '/ReactDocs/zustand-docs' },
+          { text: 'React 状态管理库深度对比：在做技术选型的时候如何选择合适的状态库', link: '/ReactDocs/React状态库对比分析' }
         ]
       }
     ],

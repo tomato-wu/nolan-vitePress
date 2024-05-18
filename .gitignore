@@ -1,4 +1,13 @@
 node_modules
 
-# Editor directories and files
-.vscode/*
+.DS_Store
+
+dist-ssr
+
+cache
+
+.cache
+
+.temp
+
+*.local
